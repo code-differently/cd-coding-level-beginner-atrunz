@@ -19,7 +19,16 @@ public class Problem {
 
     public static String everyOther(String str, int n) {
 
-        return null;
+        int index = 0;
+
+        String newString = "";
+
+
+        while (index < str.length()-n) {
+            newString = newString + str.charAt(index);
+            index = index + n;
+        }
+        return newString;
     }
 
     /* Problem 12
@@ -37,7 +46,13 @@ public class Problem {
 
     public static Boolean dogTrouble(boolean bulldogGrowl, boolean labGrowl) {
 
-        return null;
+        if(bulldogGrowl && labGrowl){
+            return true;
+        }else if (!bulldogGrowl && !labGrowl){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /* Problem 13
@@ -54,7 +69,22 @@ public class Problem {
 
     public static Boolean puppyCry(boolean crying, int hour) {
 
-        return null;
+        if (hour < 7){
+            if (crying){
+                return true;
+            }else{
+                return false;
+            }
+        }else if (hour > 20){
+            if (crying){
+                return true;
+            }else{
+                return false;
+            }
+        }else {
+            return false;
+        }
+
     }
 
 
@@ -74,7 +104,19 @@ public class Problem {
 
     public static Boolean checkPosOrNeg(int a, int b, boolean negative) {
 
-        return null;
+        if (negative){
+            if (a < 0 && b < 0){
+                return true;
+            }else{
+                return false;
+            }
+        }else if (a < 0 && b < 0){
+            return false;
+        }else if (a < 0 || b < 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 
@@ -90,8 +132,17 @@ public class Problem {
      */
 
     public static String exchange(String str) {
+        char first = str.charAt(0);
+        char last = str.charAt(str.length()-1);
+        if (str.length() == 1) {
+            return str;
+        } else{
+            String clipLetters = str.substring(1, str.length()-1);
+            return last + clipLetters + first;
+        }
 
-        return null;
+
+
     }
 
 
@@ -112,7 +163,13 @@ public class Problem {
 
     public static Boolean multipleOf(int number){
 
-        return null;
+        if (number < 0){
+            return false;
+        }else if (number % 3 == 0 || number % 5 == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 
@@ -131,7 +188,13 @@ public class Problem {
 
     public static Boolean checkTemp(int temp1, int temp2) {
 
-        return null;
+        if (temp1 < 0){
+            return temp2 > 100;
+        }else if (temp2 < 0){
+            return temp1 > 100;
+        }else{
+            return false;
+        }
     }
 
 
@@ -152,7 +215,14 @@ public class Problem {
 
     public static Boolean oneTeen(int person1, int person2) {
 
-        return null;
+        boolean teen1 = (person1 >= 13 && person1 <=19);
+        boolean teen2 = (person2 >= 13 && person2 <=19);
+        if (teen1 && teen2 || !teen1 && !teen2){
+            return false;
+        }else{
+            return true;
+        }
+
     }
 
 
@@ -170,8 +240,17 @@ public class Problem {
      */
 
     public static String beginWithOz(String ounces) {
+        String firstChar = ounces.substring(0, 1);
+        String secondChar = ounces.substring(1, 2);
+        String newChar = "";
+        if (firstChar.equals("o")){
+            newChar=newChar+firstChar;
+        }
+        if (secondChar.equals("z")) {
+            newChar = newChar+secondChar;
+        }
+        return newChar;
 
-        return null;
     }
 
 
@@ -190,6 +269,12 @@ public class Problem {
 
     public static Boolean range3050(int one, int two) {
 
-        return null;
+        if (Math.abs(one-two) > 10){
+            return false;
+        }else if ((one >= 30 && one <= 40) || (one >= 40 && one <= 50)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
