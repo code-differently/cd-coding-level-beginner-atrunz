@@ -14,9 +14,14 @@ public class Problem {
     avengersAssemble(true, true) --> true
      */
 
+
+
+
     public static Boolean avengersAssemble(boolean dcHero, boolean avengerHero) {
 
-        return null;
+        if(avengerHero){
+            return true;
+        }else return !dcHero;
 
     }
 
@@ -33,7 +38,13 @@ public class Problem {
 
     public static Boolean nearValue(int n) {
 
-        return null;
+
+        int hundredCheck = Math.abs(100-n);
+        int twoHundredCheck = Math.abs(200-n);
+
+        return twoHundredCheck <= 10 || hundredCheck <= 10;
+
+
     }
 
      /* Problem 4
@@ -48,7 +59,14 @@ public class Problem {
 
     public static String missingLetter(String letter, int n) {
 
-        return null;
+        String newStringFirst = letter.substring(0, n);
+        if (n != letter.length()-1) {
+            String newStringLast = letter.substring(n+1);
+            return newStringFirst + newStringLast;
+        }else{
+            return newStringFirst;
+        }
+
     }
 
     /* Problem 5
@@ -62,8 +80,10 @@ public class Problem {
      */
 
     public static String wordOfDay(String word) {
-
-        return null;
+        int finalIndex = word.length()-1;
+        char lastLetter = word.charAt(finalIndex);
+        String newString = lastLetter + word + lastLetter;
+        return newString;
     }
 
     /* Problem 6
@@ -76,7 +96,8 @@ public class Problem {
 
     public static Boolean beginWithHi(String phrase) {
 
-        return null;
+        String newPhrase = phrase.toLowerCase();
+        return newPhrase.startsWith("hi");
     }
 
      /* Problem 7
@@ -90,7 +111,15 @@ public class Problem {
 
     public static Boolean containTeen(int one, int two, int three){
 
-        return null;
+        if ((one-10) > 0 && (one-10) < 10){
+            return true;
+        }else if((two-10) > 0 && (two-10) < 10) {
+            return true;
+        } else if ((three-10) > 0 && (three-10) < 10) {
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /* Problem 8
@@ -105,7 +134,8 @@ public class Problem {
 
     public static Boolean startWithIx(String phrase) {
 
-        return null;
+        String shortPhrase = phrase.substring(1,3);
+        return shortPhrase.equalsIgnoreCase("ix");
     }
 
      /* Problem 9
@@ -119,10 +149,19 @@ public class Problem {
     near10(13, 7) --> 0
      */
 
-    public static Integer near10(int one, int two){
+    public static Integer near10(int one, int two) {
+        int distance1 = Math.abs(one - 10);
+        int distance2 = Math.abs(two - 10);
 
-        return null;
+        if (distance2 > distance1) {
+            return one;
+        } else if (distance1 == distance2) {
+            return 0;
+        } else {
+            return two;
+        }
     }
+
 
     /* Problem 10
     Determine if the given string contains between 1 and 3 'e' characters.
@@ -133,7 +172,17 @@ public class Problem {
      */
 
     public static Boolean containE(String str) {
+        //int lastIndex = str.lastIndexOf('e');
 
-        return null;
+        //int secondLastIndex = str.lastIndexOf('e', lastIndex-1);
+        int firstIndex = str.indexOf('e');
+        int secondIndex = str.indexOf('e', firstIndex+1);
+        int thirdIndex = str.indexOf('e', secondIndex+1);
+        int fourthIndex = str.indexOf('e', thirdIndex+1);
+
+        if (fourthIndex != -1){
+            return false;
+        } else return firstIndex != -1 || secondIndex != -1 || thirdIndex != -1;
+
     }
 }
