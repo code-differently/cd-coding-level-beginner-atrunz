@@ -14,8 +14,17 @@ public class Problem {
      */
 
     public static Boolean compareLastDigit(int value1, int value2) {
+        String value1S = String.valueOf(value1);
+        String value2S = String.valueOf(value2);
 
-        return null;
+        char value1Char = value1S.charAt(value1S.length()-1);
+        char value2Char = value2S.charAt(value2S.length()-1);
+
+        if (value1Char == value2Char){
+            return true;
+        }
+
+        return false;
     }
 
 
@@ -32,7 +41,11 @@ public class Problem {
 
     public static Integer doubleTheSum(int a, int b) {
 
-        return null;
+        if (a == b){
+            return 2*(a+b);
+        }else{
+            return a+b;
+        }
     }
 
 
@@ -48,7 +61,14 @@ public class Problem {
 
     public static Boolean lookOut10(int a, int b) {
 
-        return null;
+        if (a == 10){
+            return true;
+        }else if (b==10){
+            return true;
+        }else if (a + b == 10){
+            return true;
+        }
+        return false;
     }
 
 
@@ -65,7 +85,11 @@ public class Problem {
 
     public static String beginWithNot(String not) {
 
-        return null;
+        if (not.startsWith("not")){
+            return not;
+        }else{
+            return "not " + not;
+        }
     }
 
 
@@ -81,8 +105,12 @@ public class Problem {
      */
 
     public static String popular3(String front) {
-
-        return null;
+        if (front.length() >= 4) {
+            String firstThree = front.substring(0, 3);
+            return firstThree+firstThree+firstThree;
+        }else{
+            return front+front+front;
+        }
     }
 
 
@@ -98,7 +126,12 @@ public class Problem {
 
     public static String double22(String word) {
 
-        return null;
+        if (word.length()<2){
+            return word + word + word;
+        }else{
+            String firstTwo = word.substring(0,2);
+            return firstTwo + word + firstTwo;
+        }
     }
 
 
@@ -113,7 +146,13 @@ public class Problem {
 
     public static Boolean range1020(int a, int b) {
 
-        return null;
+        if (a >= 10 && a <= 20){
+            return true;
+        }else if (b >= 10 && b <= 20){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 
@@ -129,8 +168,11 @@ public class Problem {
      */
 
     public static String deleteDel(String del) {
-
-        return null;
+        if (del.startsWith("del", 1)){
+            return del.charAt(0) + del.substring(4);
+        }else{
+            return del;
+        }
     }
 
 
@@ -145,7 +187,9 @@ public class Problem {
 
     public static Integer maxNumber(int a, int b, int c) {
 
-        return null;
+        int biggerNumberOne = Math.max(a, b);
+        int biggerNumberTwo = Math.max(biggerNumberOne, c);
+        return biggerNumberTwo;
     }
 
 
@@ -162,7 +206,18 @@ public class Problem {
 
     public static Integer larger1020(int a, int b) {
 
-        return null;
+        if (a >= 10 && a <= 20){
+            if (b >= 10 && b <= 20){
+                return Math.max(a, b);
+            }else{
+                return a;
+            }
+            //return bigger
+        }else if (b >= 10 && b <= 20){
+            return b;
+        }else{
+            return 0;
+        }
     }
 
 
@@ -180,6 +235,10 @@ public class Problem {
 
     public static String goingUp(String hill) {
 
-        return null;
+        if (hill.length() < 4){
+            return hill.toUpperCase();
+        }
+        String finalThreeLetters = hill.substring(hill.length()-3);
+        return hill.substring(0, hill.length()-3) + (finalThreeLetters.toUpperCase());
     }
 }
