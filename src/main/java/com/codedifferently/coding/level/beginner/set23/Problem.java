@@ -15,6 +15,13 @@ public class Problem {
 
     public static Boolean lookOut10(int a, int b) {
 
-        return null;
+        if (a == 10){
+            return true;
+        }else if (b==10){
+            return true;
+        }else if (a + b == 10){
+            return true;
+        }
+        return false;
     }
 }

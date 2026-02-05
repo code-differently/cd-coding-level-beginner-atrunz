@@ -47,6 +47,8 @@ public class Problem {
 
     }
 
+
+
      /* Problem 4
     The instructor provided you with a non-empty string and a number n.
     The instructor wants you to remove the letter at index n and provide a new string.

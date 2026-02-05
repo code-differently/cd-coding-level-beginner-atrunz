@@ -16,6 +16,12 @@ public class Problem {
 
     public static Boolean range3050(int one, int two) {
 
-        return null;
+        if (Math.abs(one-two) > 10){
+            return false;
+        }else if ((one >= 30 && one <= 40) || (one >= 40 && one <= 50)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

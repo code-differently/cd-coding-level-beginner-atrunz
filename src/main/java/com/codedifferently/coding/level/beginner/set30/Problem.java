@@ -16,6 +16,18 @@ public class Problem {
 
     public static Integer larger1020(int a, int b) {
 
-        return null;
+        if (a >= 10 && a <= 20){
+            if (b >= 10 && b <= 20){
+                return Math.max(a, b);
+            }else{
+                return a;
+            }
+            //return bigger
+        }else if (b >= 10 && b <= 20){
+            return b;
+        }else{
+            return 0;
+        }
     }
+
 }

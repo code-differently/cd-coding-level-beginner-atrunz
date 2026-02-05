@@ -15,6 +15,21 @@ public class Problem {
 
     public static Boolean puppyCry(boolean crying, int hour) {
 
-        return null;
+        if (hour < 7){
+            if (crying){
+                return true;
+            }else{
+                return false;
+            }
+        }else if (hour > 20){
+            if (crying){
+                return true;
+            }else{
+                return false;
+            }
+        }else {
+            return false;
+        }
+
     }
 }

@@ -12,7 +12,16 @@ public class Problem {
      */
 
     public static String exchange(String str) {
+        char first = str.charAt(0);
+        char last = str.charAt(str.length()-1);
+        if (str.length() == 1) {
+            return str;
+        } else{
+            String clipLetters = str.substring(1, str.length()-1);
+            return last + clipLetters + first;
+        }
 
-        return null;
+
+
     }
 }

@@ -15,7 +15,11 @@ public class Problem {
      */
 
     public static String popular3(String front) {
-
-        return null;
+        if (front.length() >= 4) {
+            String firstThree = front.substring(0, 3);
+            return firstThree+firstThree+firstThree;
+        }else{
+            return front+front+front;
+        }
     }
 }

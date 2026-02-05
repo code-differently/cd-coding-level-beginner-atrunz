@@ -17,8 +17,16 @@ public class Problem {
 
      */
 
-    public static Integer near10(int one, int two){
+    public static Integer near10(int one, int two) {
+        int distance1 = Math.abs(one - 10);
+        int distance2 = Math.abs(two - 10);
 
-        return null;
+        if (distance2 > distance1) {
+            return one;
+        } else if (distance1 == distance2) {
+            return 0;
+        } else {
+            return two;
+        }
     }
 }

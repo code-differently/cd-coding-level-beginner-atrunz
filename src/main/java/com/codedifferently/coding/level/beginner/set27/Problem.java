@@ -13,6 +13,12 @@ public class Problem {
 
     public static Boolean range1020(int a, int b) {
 
-        return null;
+        if (a >= 10 && a <= 20){
+            return true;
+        }else if (b >= 10 && b <= 20){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -18,6 +18,12 @@ public class Problem {
 
     public static Boolean multipleOf(int number){
 
-        return null;
+        if (number < 0){
+            return false;
+        }else if (number % 3 == 0 || number % 5 == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

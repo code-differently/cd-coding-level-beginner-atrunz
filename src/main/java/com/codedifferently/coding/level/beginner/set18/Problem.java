@@ -19,7 +19,14 @@ public class Problem {
 
     public static Boolean oneTeen(int person1, int person2) {
 
-        return null;
+        boolean teen1 = (person1 >= 13 && person1 <=19);
+        boolean teen2 = (person2 >= 13 && person2 <=19);
+        if (teen1 && teen2 || !teen1 && !teen2){
+            return false;
+        }else{
+            return true;
+        }
+
     }
 
 }

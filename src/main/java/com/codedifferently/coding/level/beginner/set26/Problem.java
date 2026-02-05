@@ -15,6 +15,11 @@ public class Problem {
 
     public static String double22(String word) {
 
-        return null;
+        if (word.length()<2){
+            return word + word + word;
+        }else{
+            String firstTwo = word.substring(0,2);
+            return firstTwo + word + firstTwo;
+        }
     }
 }

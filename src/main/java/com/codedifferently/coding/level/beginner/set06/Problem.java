@@ -13,6 +13,7 @@ public class Problem {
 
     public static Boolean beginWithHi(String phrase) {
 
-        return null;
+        String newPhrase = phrase.toLowerCase();
+        return newPhrase.startsWith("hi");
     }
 }

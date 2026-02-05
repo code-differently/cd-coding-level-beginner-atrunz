@@ -17,6 +17,10 @@ public class Problem {
 
     public static String beginWithNot(String not) {
 
-        return null;
+        if (not.startsWith("not")){
+            return not;
+        }else{
+            return "not " + not;
+        }
     }
 }

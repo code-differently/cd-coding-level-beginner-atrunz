@@ -15,8 +15,17 @@ public class Problem {
      */
 
     public static String beginWithOz(String ounces) {
+        String firstChar = ounces.substring(0, 1);
+        String secondChar = ounces.substring(1, 2);
+        String newChar = "";
+        if (firstChar.equals("o")){
+            newChar=newChar+firstChar;
+        }
+        if (secondChar.equals("z")) {
+            newChar = newChar+secondChar;
+        }
+        return newChar;
 
-        return null;
     }
 
 }

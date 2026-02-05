@@ -17,6 +17,7 @@ public class Problem {
 
     public static Boolean startWithIx(String phrase) {
 
-        return null;
+        String shortPhrase = phrase.substring(1,3);
+        return shortPhrase.equalsIgnoreCase("ix");
     }
 }

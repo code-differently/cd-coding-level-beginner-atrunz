@@ -14,6 +14,8 @@ public class Problem {
 
     public static Integer maxNumber(int a, int b, int c) {
 
-        return null;
+        int biggerNumberOne = Math.max(a, b);
+        int biggerNumberTwo = Math.max(biggerNumberOne, c);
+        return biggerNumberTwo;
     }
 }

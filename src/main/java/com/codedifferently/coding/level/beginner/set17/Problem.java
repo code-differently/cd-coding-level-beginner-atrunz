@@ -16,6 +16,12 @@ public class Problem {
 
     public static Boolean checkTemp(int temp1, int temp2) {
 
-        return null;
+        if (temp1 < 0){
+            return temp2 > 100;
+        }else if (temp2 < 0){
+            return temp1 > 100;
+        }else{
+            return false;
+        }
     }
 }

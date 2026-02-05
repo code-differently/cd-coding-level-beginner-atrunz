@@ -18,6 +18,10 @@ public class Problem {
 
     public static String goingUp(String hill) {
 
-        return null;
+        if (hill.length() < 4){
+            return hill.toUpperCase();
+        }
+        String finalThreeLetters = hill.substring(hill.length()-3);
+        return hill.substring(0, hill.length()-3) + (finalThreeLetters.toUpperCase());
     }
 }

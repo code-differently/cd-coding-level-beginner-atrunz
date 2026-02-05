@@ -16,6 +16,18 @@ public class Problem {
 
     public static Boolean checkPosOrNeg(int a, int b, boolean negative) {
 
-        return null;
+        if (negative){
+            if (a < 0 && b < 0){
+                return true;
+            }else{
+                return false;
+            }
+        }else if (a < 0 && b < 0){
+            return false;
+        }else if (a < 0 || b < 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

@@ -16,7 +16,9 @@ public class Problem {
      */
 
     public static String wordOfDay(String word) {
-
-        return null;
+        int finalIndex = word.length()-1;
+        char lastLetter = word.charAt(finalIndex);
+        String newString = lastLetter + word + lastLetter;
+        return newString;
     }
 }

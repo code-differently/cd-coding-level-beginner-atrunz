@@ -15,6 +15,14 @@ public class Problem {
 
     public static Boolean containTeen(int one, int two, int three){
 
-        return null;
+        if ((one-10) > 0 && (one-10) < 10){
+            return true;
+        }else if((two-10) > 0 && (two-10) < 10) {
+            return true;
+        } else if ((three-10) > 0 && (three-10) < 10) {
+            return true;
+        }else{
+            return false;
+        }
     }
 }

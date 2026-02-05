@@ -19,6 +19,12 @@ public class Problem {
 
     public static Boolean dogTrouble(boolean bulldogGrowl, boolean labGrowl) {
 
-        return null;
+        if(bulldogGrowl && labGrowl){
+            return true;
+        }else if (!bulldogGrowl && !labGrowl){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

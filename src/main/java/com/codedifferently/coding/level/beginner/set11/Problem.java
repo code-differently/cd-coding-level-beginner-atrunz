@@ -16,6 +16,15 @@ public class Problem {
 
     public static String everyOther(String str, int n) {
 
-        return null;
+        int index = 0;
+
+        String newString = "";
+
+
+        while (index < str.length()-n) {
+            newString = newString + str.charAt(index);
+            index = index + n;
+        }
+        return newString;
     }
 }

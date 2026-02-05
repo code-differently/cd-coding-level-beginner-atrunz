@@ -14,6 +14,13 @@ public class Problem {
 
     public static String missingLetter(String letter, int n) {
 
-        return null;
+        String newStringFirst = letter.substring(0, n);
+        if (n != letter.length()-1) {
+            String newStringLast = letter.substring(n+1);
+            return newStringFirst + newStringLast;
+        }else{
+            return newStringFirst;
+        }
+
     }
 }

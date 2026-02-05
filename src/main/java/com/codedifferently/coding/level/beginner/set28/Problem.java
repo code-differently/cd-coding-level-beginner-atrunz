@@ -15,7 +15,10 @@ public class Problem {
      */
 
     public static String deleteDel(String del) {
-
-        return null;
+        if (del.startsWith("del", 1)){
+            return del.charAt(0) + del.substring(4);
+        }else{
+            return del;
+        }
     }
 }

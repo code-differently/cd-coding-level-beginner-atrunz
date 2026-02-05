@@ -16,6 +16,10 @@ public class Problem {
 
     public static Integer doubleTheSum(int a, int b) {
 
-        return null;
+        if (a == b){
+            return 2*(a+b);
+        }else{
+            return a+b;
+        }
     }
 }

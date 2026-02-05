@@ -16,7 +16,16 @@ public class Problem {
      */
 
     public static Boolean compareLastDigit(int value1, int value2) {
+        String value1S = String.valueOf(value1);
+        String value2S = String.valueOf(value2);
 
-        return null;
+        char value1Char = value1S.charAt(value1S.length()-1);
+        char value2Char = value2S.charAt(value2S.length()-1);
+
+        if (value1Char == value2Char){
+            return true;
+        }
+
+        return false;
     }
 }
